@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-import * as lamba from 'aws-cdk-lib/aws-lambda'
+import * as lambda from 'aws-cdk-lib/aws-lambda'
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class CopykittInfraStack extends cdk.Stack {
@@ -8,7 +8,7 @@ export class CopykittInfraStack extends cdk.Stack {
     super(scope, id, props);
     const apiLambda = new lambda.Function(this, "ApiFunction", {
     runtime: lambda.Runtime.PYTHON_3_9,
-    code: lamba.Code.fromAsset("../app/"),
+    code: lambda.Code.fromAsset("../app/"),
     handler: "copykitt_api.handler"
     })
 
