@@ -1,7 +1,7 @@
 FROM amazonlinux:2
 
 # Install Python
-RUN yum install -y python37 && \
+RUN yum install -y python3.7 && \
     yum install -y python3-pip && \
     yum install -y zip && \
     yum clean all
