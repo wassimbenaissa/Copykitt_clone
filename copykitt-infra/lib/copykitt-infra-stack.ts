@@ -3,7 +3,7 @@ import { Construct } from 'constructs';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as dotenv from 'dotenv';
 
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
+//import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 dotenv.config();
 
@@ -20,7 +20,7 @@ export class CopykittInfraStack extends cdk.Stack {
     handler: "copykitt_api.handler",
     layers: [layer],
     environment: {
-      OPENAI_API_KEY: process.env.OPENAI_API_KEY ?? "",
+      OPENAI_API_KEY: process.env.OPENAI_API_KEY!,
     }
     })
   }
