@@ -23,6 +23,5 @@ export class CopykittInfraStack extends cdk.Stack {
       OPENAI_API_KEY: process.env.OPENAI_API_KEY ?? "",
     }
     })
-
   }
 }
