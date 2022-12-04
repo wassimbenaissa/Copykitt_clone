@@ -20,7 +20,7 @@ export class CopykittInfraStack extends cdk.Stack {
     handler: "copykitt_api.handler",
     layers: [layer],
     environment: {
-      OPENAI_API_KEY: process.env.OPENAI_API_KEY!,
+      OPENAI_API_KEY: process.env.OPENAI_API_KEY_COPYKITT ?? "",
     }
     })
   }
