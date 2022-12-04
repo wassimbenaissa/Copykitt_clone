@@ -4,7 +4,7 @@
 docker rm layer-container
 
 # Build the base layer.
-docker build -t base-layer .
+docker build --platform linux/amd64 -t base-layer .
 
 # Rename it to layer-container.
 docker run --name layer-container base-layer
